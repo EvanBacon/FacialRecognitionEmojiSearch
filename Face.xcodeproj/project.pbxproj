@@ -14,6 +14,7 @@
 		6CE952FC1D37ED02000217EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE952FA1D37ED02000217EB /* LaunchScreen.storyboard */; };
 		6CE953071D37ED03000217EB /* FaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE953061D37ED03000217EB /* FaceTests.swift */; };
 		6CE953121D37ED03000217EB /* FaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE953111D37ED03000217EB /* FaceUITests.swift */; };
+		6CE953201D37EDFB000217EB /* FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9531F1D37EDFB000217EB /* FaceDetection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6CE9530D1D37ED03000217EB /* FaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE953111D37ED03000217EB /* FaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceUITests.swift; sourceTree = "<group>"; };
 		6CE953131D37ED03000217EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CE9531F1D37EDFB000217EB /* FaceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,9 @@
 		6CE952F01D37ED02000217EB /* Face */ = {
 			isa = PBXGroup;
 			children = (
-				6CE952F11D37ED02000217EB /* AppDelegate.swift */,
+				6CE953211D381B0B000217EB /* Other */,
 				6CE952F31D37ED02000217EB /* ViewController.swift */,
-				6CE952F51D37ED02000217EB /* Main.storyboard */,
-				6CE952F81D37ED02000217EB /* Assets.xcassets */,
-				6CE952FA1D37ED02000217EB /* LaunchScreen.storyboard */,
-				6CE952FD1D37ED02000217EB /* Info.plist */,
+				6CE9531F1D37EDFB000217EB /* FaceDetection.swift */,
 			);
 			path = Face;
 			sourceTree = "<group>";
@@ -123,6 +122,18 @@
 				6CE953131D37ED03000217EB /* Info.plist */,
 			);
 			path = FaceUITests;
+			sourceTree = "<group>";
+		};
+		6CE953211D381B0B000217EB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6CE952F11D37ED02000217EB /* AppDelegate.swift */,
+				6CE952F51D37ED02000217EB /* Main.storyboard */,
+				6CE952F81D37ED02000217EB /* Assets.xcassets */,
+				6CE952FA1D37ED02000217EB /* LaunchScreen.storyboard */,
+				6CE952FD1D37ED02000217EB /* Info.plist */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				TargetAttributes = {
 					6CE952ED1D37ED02000217EB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RRJJ45E47Z;
 					};
 					6CE953011D37ED03000217EB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE953201D37EDFB000217EB /* FaceDetection.swift in Sources */,
 				6CE952F41D37ED02000217EB /* ViewController.swift in Sources */,
 				6CE952F21D37ED02000217EB /* AppDelegate.swift in Sources */,
 			);
@@ -401,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Face/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = brix.Face;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Face/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = brix.Face;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
